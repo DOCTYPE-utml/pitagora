@@ -1,0 +1,335 @@
+void ArrangeObjed() {
+  MyWall ed;
+  //横
+  ed=new MyWall(0, -Qb/2.0, width/2.0, Qb);
+  world.add(ed);
+  ed=new MyWall(width/2.0+Qb*1.5, -Qb/2.0, width/2.0-Qb*3.5, Qb);
+  world.add(ed);
+  ed=new MyWall(Qb*1.5, height/2.0-Qb*0.5, width/2.0-Qb*1.5, Qb);
+  world.add(ed);
+  ed=new MyWall(width/2.0, height/2.0-Qb/2.0, width/2.0, Qb);
+  world.add(ed);
+  ed=new MyWall(0, height-Qb/2.0, width/2.0, Qb);
+  world.add(ed);
+  ed=new MyWall(width/2.0, height-Qb/2.0, Qb*10, Qb);
+  world.add(ed);
+  //縦
+  ed=new MyWall(-Qb/2.0, 0, Qb, height/2.0);
+  world.add(ed);
+  ed=new MyWall(-Qb/2.0, height/2.0, Qb, height/2.0);
+  world.add(ed);
+  ed=new MyWall(width/2.0-Qb/2.0, 0, Qb, height/2.0-Qb*1.5);
+  world.add(ed);
+  ed=new MyWall(width/2.0-Qb/2.0, height/2.0+Qb*1.5, Qb, height/2.0-Qb*1.5);
+  world.add(ed);
+  ed=new MyWall(width-Qb/2.0, 0, Qb, height/2.0);
+  world.add(ed);
+  ed=new MyWall(width-Qb/2.0, height/2.0, Qb, height/2.0);
+  world.add(ed);
+}
+
+void ArrangeObj1() {
+  MyWall wl;
+  wl=new MyWall(0, Qb*2, Qb*5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*5, Qb*2, Qb/2.0, Qb*7);
+  world.add(wl);
+  wl=new MyWall(Qb*5, Qb*2, Qb*4, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*6.5, Qb*4, Qb/2.0, Qb*5);
+  world.add(wl);
+  wl=new MyWall(Qb*6.5, Qb*4, Qb*2.5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*8, Qb*6, Qb*3, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*11, Qb*5, Qb*2, Qb*0.5);
+  world.add(wl);
+  wl=new MyWall(Qb*13, Qb*5, Qb*3, Qb*0.5);
+  world.add(wl);
+  wl=new MyWall(Qb*13, 0, Qb/2.0, Qb*2.5);
+  world.add(wl);
+  wl=new MyWall(Qb*13.5, Qb/2.0, Qb, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*7, Qb*8, Qb*9, Qb/2.0);
+  world.add(wl);
+
+  guardFromB=new MyWall(Qb*1.5, Qb*2.5, Qb/2.0, Qb*5);
+  world.add(guardFromB);
+
+  MyWallPoly wp;
+  wp=new MyWallPoly(Qb*5.5, Qb*2.5);
+  wp.vertex(0, 0);
+  wp.vertex(0, Qb/2.0);
+  wp.vertex(Qb/2.0, 0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*15, Qb*5);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, -Qb/2.0);
+  wp.vertex(Qb/2.0, 0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*7, Qb*8);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, 0);
+  wp.vertex(0, -Qb/2.0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*5, Qb*5);
+  wp.vertex(0, 0);
+  wp.vertex(-Qb*3.5, Qb*3.5);
+  wp.vertex(-Qb*3, Qb*3.5);
+  wp.vertex(0, Qb*0.5);
+  world.add(wp);
+
+  MyBox b;
+  b=new MyBox(Qb*9, Qb, Qb*2, Qb*2);
+  b.setDensity(1000);
+  world.add(b);
+
+  MyPoly p;
+  p=new MyPoly(Qb*11, Qb*2);
+  p.vertex(0, 0);
+  p.vertex(0, -Qb);
+  p.vertex(Qb*2, -Qb*2);
+  p.vertex(Qb*2, 0);
+  p.setDensity(1000);
+  world.add(p);
+
+  cOfB=new MyCircle(Qb*12, Qb*7, Qb/2.0);
+  cOfB.setDensity(10);
+  world.add(cOfB);
+  cOfC=new MyCircle(Qb*3.5, Qb*3, Qb);
+  world.add(cOfC);
+}
+
+void ArrangeObj2() {
+  MyWall wl;
+  wl=new MyWall(Qb*16, Qb*7, Qb*5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*17.5, Qb*0.5, Qb*6.5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*16, Qb*8, Qb*8, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*20.5, Qb*4, Qb/2.0, Qb*3);
+  world.add(wl);
+  wl=new MyWall(Qb*20, Qb*4, Qb/2.0, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*17.5, Qb, Qb/2.0, Qb*5);
+  world.add(wl);
+  wl=new MyWall(Qb*19.5, Qb*2, Qb/2.0, Qb*5);
+  world.add(wl);
+  wl=new MyWall(Qb*21, Qb, Qb*2, Qb);
+  world.add(wl);
+  wl=new MyWall(Qb*24, Qb*5.5, Qb*3, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*26.5, Qb*5.5, Qb/2.0, Qb*3);
+  world.add(wl);
+  wl=new MyWall(Qb*29, 0, Qb/2.0, Qb*9);
+  world.add(wl);
+  wl=new MyWall(Qb*31, 0, Qb, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*21, Qb*4, Qb*3, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*26.5, Qb*0.5, Qb/2.0, Qb);
+  world.add(wl);
+
+  MyWallPoly wp;
+  wp=new MyWallPoly(Qb*19.5, Qb*7);
+  wp.vertex(0, 0);
+  wp.vertex(0, -Qb/2.0);
+  wp.vertex(-Qb/2.0, 0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*20, Qb*4);
+  wp.vertex(0, 0);
+  wp.vertex(0, -Qb/2.0);
+  wp.vertex(Qb, 0);
+  world.add(wp);
+
+  mb1=new MyBox(Qb*27+2, Qb*5.5, Qb*2-4, Qb/2.0);
+  mb1.setFill(0);
+  mb1.setStatic(false);
+  mb1.setDensity(1);
+  world.add(mb1);
+  mb2=new MyBox(Qb*27.5, Qb*8.5, Qb, Qb);
+  mb2.setFill(0);
+  mb2.setStatic(true);
+  world.add(mb2);
+  fpj=new FPrismaticJoint(mb1, mb2);
+  fpj.setAnchor(Qb*28, Qb*9);
+  fpj.setEnableLimit(true);
+  fpj.setLowerTranslation(-Qb*1.5);
+  fpj.setUpperTranslation(Qb*1.5);
+  world.add(fpj);
+
+  mb3=new MyBox(Qb*29.5+2, Qb*5.5, Qb*2-4, Qb/2.0);
+  mb3.setFill(0);
+  mb3.setStatic(false);
+  mb3.setDensity(1);
+  world.add(mb3);
+  mb4=new MyBox(Qb*30, Qb*8.5, Qb, Qb);
+  mb4.setFill(0);
+  mb4.setStatic(true);
+  world.add(mb4);
+  fpj2=new FPrismaticJoint(mb3, mb4);
+  fpj2.setAnchor(Qb*30.5, Qb*9);
+  fpj2.setEnableLimit(true);
+  fpj2.setLowerTranslation(-Qb*1.5);
+  fpj2.setUpperTranslation(Qb*1.5);
+  world.add(fpj2);
+}
+
+void ArrangeObj3() {
+  MyWall wl;
+  wl=new MyWall(Qb*1.5, Qb*9, Qb/2.0, Qb*9);
+  world.add(wl);
+  wl=new MyWall(Qb*4, Qb*16, Qb, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*10, Qb*9.5, Qb, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*12, Qb*9.5, Qb, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*13, Qb*9.5, Qb/2.0, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*13, Qb*16, Qb*3, Qb*2.5);
+  world.add(wl);
+  wl=new MyWall(Qb*7, Qb*16, Qb*2, Qb*2.5);
+  world.add(wl);
+  wl=new MyWall(Qb*2, Qb*12, Qb*3, Qb*1.5);
+  world.add(wl);
+  wl=new MyWall(Qb*9, Qb*14.5, Qb, Qb*3);
+  world.add(wl);
+  wl=new MyWall(Qb*9, Qb*9.5, Qb, Qb*2.5);
+  world.add(wl);
+  wl=new MyWall(Qb*2, Qb*12, Qb, Qb*6);
+  world.add(wl);
+  wl=new MyWall(Qb*14.5, Qb*11, Qb, Qb*7);
+  world.add(wl);
+
+  MyWallPoly wp;
+  wp=new MyWallPoly(Qb*5, Qb*13.5);
+  wp.vertex(0, 0);
+  wp.vertex(-Qb*2, 0);
+  wp.vertex(-Qb*2, Qb*2);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*9, Qb*12);
+  wp.vertex(0, 0);
+  wp.vertex(Qb, 0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*13.5, Qb*9.5);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, 0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*13, Qb*11.5);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, 0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+
+  MyBox b;
+  b=new MyBox(Qb*2+1, Qb*9.5, Qb, Qb*0.5);
+  b.setDensity(1000);
+  world.add(b);
+  b=new MyBox(Qb*3+1, Qb*9.5, Qb, Qb*1.5);
+  b.setDensity(1000);
+  world.add(b);
+  b=new MyBox(Qb*11, Qb*13, Qb, Qb);
+  b.setDensity(1000);
+  world.add(b);
+  b=new MyBox(Qb*10, Qb*15, Qb*3, Qb/2.0);
+  b.setDensity(1000);
+  world.add(b);
+  b=new MyBox(Qb*7-1, Qb*15, Qb*2, Qb);
+  b.setDensity(1000);
+  world.add(b);
+
+  MyPoly p;
+  p=new MyPoly(Qb*5+1, Qb*10);
+  p.vertex(0, 0);
+  p.vertex(0, Qb*4);
+  p.vertex(Qb*2, Qb*3);
+  p.vertex(Qb*2, 0);
+  p.setDensity(1000);
+  world.add(p);
+  p=new MyPoly(Qb*5+1, Qb*16);
+  p.vertex(0, 0);
+  p.vertex(0, Qb);
+  p.vertex(Qb*2, Qb);
+  p.vertex(Qb*2, -Qb);
+  p.setDensity(1000);
+  world.add(p);
+
+  MyCircle c;
+  c=new MyCircle(Qb*3.5, Qb*15, Qb);
+  c.setDensity(100);
+  world.add(c);
+}
+
+void ArrangeObj4() {
+  MyWall wl;
+  wl=new MyWall(Qb*19, Qb*14.5, Qb*1.5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*20, Qb*11.5, Qb*1.5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*21, Qb*16, Qb*5, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*22, Qb*13, Qb*8, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*25.5, Qb*16, Qb/2.0, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*30, Qb*13.5, Qb/2.0, Qb*4.5);
+  world.add(wl);
+  wl=new MyWall(Qb*27, Qb*16, Qb/2.0, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*28.5, Qb*16, Qb/2.0, Qb*2);
+  world.add(wl);
+  wl=new MyWall(Qb*27, Qb*16, Qb*3, Qb/2.0);
+  world.add(wl);
+  wl=new MyWall(Qb*20.5, Qb*15, Qb/2.0, Qb*1.5);
+  world.add(wl);
+  wl=new MyWall(Qb*21.5, Qb*12, Qb/2.0, Qb*1.5);
+  world.add(wl);
+
+  MyWallPoly wp;
+  wp=new MyWallPoly(Qb*30, Qb*13);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, Qb/2.0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*20.5, Qb*14.5);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, Qb/2.0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+  wp=new MyWallPoly(Qb*21.5, Qb*11.5);
+  wp.vertex(0, 0);
+  wp.vertex(Qb/2.0, Qb/2.0);
+  wp.vertex(0, Qb/2.0);
+  world.add(wp);
+
+  MyBox b;
+  b=new MyBox(Qb*17.5, Qb*9, Qb/2.0, Qb*7.5);
+  b.setDensity(100);
+  world.add(b);
+  b=new MyBox(Qb*22.5, Qb*11-1, Qb/2.0, Qb*2);
+  b.setDensity(1);
+  world.add(b);
+  b=new MyBox(Qb*23.5, Qb*11-1, Qb/2.0, Qb*2);
+  b.setDensity(1);
+  world.add(b);
+  b=new MyBox(Qb*24.5, Qb*11-1, Qb/2.0, Qb*2);
+  b.setDensity(1);
+  world.add(b);
+
+  MyCircle c;
+  c=new MyCircle(Qb*20.5, Qb*10, Qb);
+  c.setDensity(1);
+  world.add(c);
+
+  cOfE=new MyCircle(Qb*19.5, Qb*10, Qb);
+  cOfE.setDensity(1);
+  world.add(cOfE);
+  cOfD=new MyCircle(Qb*26, Qb*12.5-1, Qb);
+  cOfD.setDensity(1);
+  cOfD.setGrabbable(true);
+  world.add(cOfD);
+}
